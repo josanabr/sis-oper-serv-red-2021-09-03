@@ -13,7 +13,7 @@ Acceden a la máquina con el comando
 vagrant ssh master
 ```
 
-Se ubican en el directorio `/vagrant` de esta manera `cd vagrant`.
+Se ubican en el directorio `/vagrant` de esta manera `cd /vagrant`.
 
 ## Construcción de imagen de contenedor
 
