@@ -40,7 +40,15 @@ def percentcpu():
 # del sistema. Para obtener la salida por pantalla en formato cadena de 
 # caracteres de lo que entrega os.popen() es necesario invocar a esa salida el
 # metodo read(), de esta manera: os.popen(command).read(), donde 'command' es
-# una variable que contiene el comando que se desea ejecutar.
+#: una variable que contiene el comando que se desea ejecutar.
+
+@app.route("/comando", methods = ['POST'])
+def comando(): 
+    if request.json: 
+        command = request.json['command'] 
+        return os.popen(command).read() 
+    else: 
+        return "solicitud erronea"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",debug=True)
