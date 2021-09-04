@@ -29,5 +29,12 @@ def memtotal():
 def percentcpu():
     return str(psutil.cpu_percent())
 
+#
+# Construya un endpoint que acepte este tipo de peticion
+# curl -X POST -H "Content-type: application/json" -d '{ "comando": "ls" }' http://localhost:5000/comando
+# 
+# y lo que hace el endpoint es ejecutar el comando 'ls' y enviar la respuesta 
+# al usuario 
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0",debug=True)
