@@ -35,6 +35,12 @@ def percentcpu():
 # 
 # y lo que hace el endpoint es ejecutar el comando 'ls' y enviar la respuesta 
 # al usuario 
+#
+# Tip 1: El comando os.popen() permite llevar a cabo la ejecucion de un comando 
+# del sistema. Para obtener la salida por pantalla en formato cadena de 
+# caracteres de lo que entrega os.popen() es necesario invocar a esa salida el
+# metodo read(), de esta manera: os.popen(command).read(), donde 'command' es
+# una variable que contiene el comando que se desea ejecutar.
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",debug=True)
